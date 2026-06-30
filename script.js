@@ -2,12 +2,12 @@
 const themeToggleBtn = document.getElementById('themeToggle');
 const htmlElement = document.documentElement;
 
-// Load theme preference from localStorage or fallback to default Dark mode
+// Load theme preference from localStorage or fallback to default Light mode
 const savedTheme = localStorage.getItem('kymstore-theme');
-if (savedTheme === 'light') {
-  htmlElement.classList.add('light-theme');
-} else {
+if (savedTheme === 'dark') {
   htmlElement.classList.remove('light-theme');
+} else {
+  htmlElement.classList.add('light-theme');
 }
 
 themeToggleBtn.addEventListener('click', () => {
