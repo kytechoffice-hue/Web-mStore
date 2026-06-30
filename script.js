@@ -336,7 +336,12 @@ if (demoRequestForm) {
       // Show success container
       demoSuccessMessage.style.display = 'block';
       
-      // Print console log to simulate backend reception
+      // Open user's email client with pre-filled details
+      const subject = encodeURIComponent(`KY mStore Live Demo Request - ${name}`);
+      const body = encodeURIComponent(`Hello,\n\nI would like to request a live demo session for KY mStore Enterprise.\n\nHere are my details:\n- Customer Name: ${name}\n- Contact No: ${phone}\n- Email ID: ${email}\n\nPlease contact me to schedule the walkthrough.\n\nBest regards,\n${name}`);
+      
+      window.location.href = `mailto:kytechoffice@gmail.com?subject=${subject}&body=${body}`;
+      
       console.log('Demo Request Submitted:', { name, phone, email, timestamp: new Date() });
     }, 1000);
   });
