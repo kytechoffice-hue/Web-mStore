@@ -320,12 +320,26 @@ if (demoRequestForm) {
     const phone = document.getElementById('demoPhone').value;
     const email = document.getElementById('demoEmail').value;
     
-    // Simulate API submission
     const submitBtn = demoRequestForm.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span>Processing...</span>';
     
-    setTimeout(() => {
+    // Send form data in the background using FormSubmit AJAX API
+    fetch('https://formsubmit.co/ajax/kytechoffice@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        Customer_Name: name,
+        Contact_No: phone,
+        Email_ID: email,
+        _subject: `New KY mStore Live Demo Request - ${name}`
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
       // Hide form
       demoRequestForm.style.display = 'none';
       
@@ -336,13 +350,13 @@ if (demoRequestForm) {
       // Show success container
       demoSuccessMessage.style.display = 'block';
       
-      // Open user's email client with pre-filled details
-      const subject = encodeURIComponent(`KY mStore Live Demo Request - ${name}`);
-      const body = encodeURIComponent(`Hello,\n\nI would like to request a live demo session for KY mStore Enterprise.\n\nHere are my details:\n- Customer Name: ${name}\n- Contact No: ${phone}\n- Email ID: ${email}\n\nPlease contact me to schedule the walkthrough.\n\nBest regards,\n${name}`);
-      
-      window.location.href = `mailto:kytechoffice@gmail.com?subject=${subject}&body=${body}`;
-      
-      console.log('Demo Request Submitted:', { name, phone, email, timestamp: new Date() });
-    }, 1000);
+      console.log('Demo Request successfully sent via FormSubmit:', data);
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<span>Book Demo Session</span>';
+      alert('An error occurred. Please check your internet connection or email us directly.');
+    });
   });
 }
