@@ -3,7 +3,7 @@ const themeToggleBtn = document.getElementById('themeToggle');
 const htmlElement = document.documentElement;
 
 // Load theme preference from localStorage or fallback to default Dark mode
-const savedTheme = localStorage.getItem('theme');
+const savedTheme = localStorage.getItem('kymstore-theme');
 if (savedTheme === 'light') {
   htmlElement.classList.add('light-theme');
 } else {
@@ -13,10 +13,10 @@ if (savedTheme === 'light') {
 themeToggleBtn.addEventListener('click', () => {
   if (htmlElement.classList.contains('light-theme')) {
     htmlElement.classList.remove('light-theme');
-    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('kymstore-theme', 'dark');
   } else {
     htmlElement.classList.add('light-theme');
-    localStorage.setItem('theme', 'light');
+    localStorage.setItem('kymstore-theme', 'light');
   }
 });
 
