@@ -1,0 +1,10 @@
+{
+  "name": "web-mstore",
+  "version": "1.0.0",
+  "description": "KY mStore Enterprise static landing page",
+  "scripts": {
+    "build": "echo 'Building static website...'",
+    "start": "npx http-server -p 8080"
+  },
+  "dependencies": {}
+}
