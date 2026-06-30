@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KY mStore Enterprise — E-Commerce & Retail Management System</title>
+  <meta name="description" content="A premium, enterprise-grade business intelligence, inventory management, POS billing, CRM, and compliance software. personalize your workspace in light and dark mode.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- HEADER NAVIGATION --- -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#hero" class="logo">
+        <div class="logo-icon">M</div>
+        <span>KY mStore</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="active">Overview</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#sandbox">Interactive Demo</a></li>
+          <li><a href="#gallery">Screenshots</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <!-- Moon Icon (Dark Mode active / click for light) -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="null" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <!-- Sun Icon (Light Mode active / click for dark) -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </button>
+        <a href="#cta" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.875rem;">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- --- HERO SECTION --- -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">Enterprise Retail Suite</div>
+          <h1 class="hero-title">Manage Your Entire Business with <span class="gradient-text">KY mStore</span></h1>
+          <p class="hero-description">A high-speed e-commerce, POS billing, and real-time ledger accounting platform built for modern retail enterprises. Experience full customizability, automated workflows, and robust business intelligence.</p>
+          <div class="hero-buttons">
+            <a href="#sandbox" class="btn btn-primary">Try Live Sandbox</a>
+            <a href="#features" class="btn btn-outline">Explore Capabilities</a>
+          </div>
+          
+          <div class="hero-brands">
+            <div class="hero-brands-text">Empowering Teams Globally</div>
+            <div class="brand-logos">
+              <span class="brand-logo">POS RETAIL</span>
+              <span class="brand-logo">FINTECH</span>
+              <span class="brand-logo">LOGISTICS</span>
+              <span class="brand-logo">CRM+</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <!-- Device Mockup (Browser Window) showing app screenshots -->
+          <div class="device-mockup">
+            <div class="device-header">
+              <div class="device-dot red"></div>
+              <div class="device-dot yellow"></div>
+              <div class="device-dot green"></div>
+              <div style="margin-left: 12px; font-size: 0.7rem; color: var(--text-muted); font-family: monospace;">admin.kymstore.com/settings</div>
+            </div>
+            <div class="device-content">
+              <div class="device-slider" id="heroSlider">
+                <div class="device-slide"><img src="images/theme_settings.png" alt="Theme Settings Interface"></div>
+                <div class="device-slide"><img src="images/number_series.png" alt="Number Series Settings Interface"></div>
+                <div class="device-slide"><img src="images/invoice_templates.png" alt="Invoice Templates settings and preview"></div>
+                <div class="device-slide"><img src="images/email_config.png" alt="Email Configuration Interface"></div>
+                <div class="device-slide"><img src="images/financial_years.png" alt="Financial Years Configuration"></div>
+              </div>
+              <div class="device-nav">
+                <button class="device-nav-dot active" onclick="setHeroSlide(0)"></button>
+                <button class="device-nav-dot" onclick="setHeroSlide(1)"></button>
+                <button class="device-nav-dot" onclick="setHeroSlide(2)"></button>
+                <button class="device-nav-dot" onclick="setHeroSlide(3)"></button>
+                <button class="device-nav-dot" onclick="setHeroSlide(4)"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- FEATURES SECTION --- -->
+    <section class="section" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2 class="section-title">Comprehensive Enterprise Toolkit</h2>
+          <p class="section-subtitle">Ditch fragmented services. KY mStore brings sales, inventory, double-entry finance, customer relationships, and configurations into a single, cohesive engine.</p>
+        </div>
+        
+        <div class="features-grid">
+          
+          <!-- Category: Business Intelligence -->
+          <div class="feature-card" style="--accent-gradient: linear-gradient(135deg, #8b5cf6, #a78bfa)">
+            <div class="feature-icon-wrapper" style="background-color: var(--color-analytics)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Business Intelligence & Ledger</h3>
+            <p class="feature-description">Track cash books, journals, balance sheets, and real-time profitability graphs using robust accounting models.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Interactive Command Dashboard</strong>
+                  <span>Real-time tracking of revenue, order metrics, payment statuses, and low-stock alerts.</span>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Double-Entry General Ledgers</strong>
+                  <span>General ledger, trial balance, journal entries, and automated financial statements (P&L, Balance Sheet).</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category: Stock & Catalog -->
+          <div class="feature-card" style="--accent-gradient: linear-gradient(135deg, #10b981, #34d399)">
+            <div class="feature-icon-wrapper" style="background-color: var(--color-stock)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Stock & Catalog Logistics</h3>
+            <p class="feature-description">Automate catalog details, track warehouse placements down to specific bins, and print utility barcodes.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Smart Multi-Warehouse Stock</strong>
+                  <span>Real-time stock counts, auto-reorder thresholds, opening balances, damage logging, and adjustments.</span>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Bin Placements & Barcodes</strong>
+                  <span>Map specific bin addresses for picking, and print custom barcode/QR codes direct to labels.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category: Sales & POS Billing -->
+          <div class="feature-card" style="--accent-gradient: linear-gradient(135deg, #0ea5e9, #38bdf8)">
+            <div class="feature-icon-wrapper" style="background-color: var(--color-sales)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Sales, Billing & POS</h3>
+            <p class="feature-description">Fast, responsive invoicing workflow supporting digital payments, quick search, and purchase cycles.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>High-Speed Point of Sale (POS)</strong>
+                  <span>Instant lookups, multi-mode checkouts (UPI, card, cash), and immediate receipt printer support.</span>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Sales Orders & Procurement</strong>
+                  <span>Create custom quotes, invoice conversions, Purchase Orders (PO), receipt entries (GRN), and returns.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category: Relationship Management -->
+          <div class="feature-card" style="--accent-gradient: linear-gradient(135deg, #f59e0b, #fbbf24)">
+            <div class="feature-icon-wrapper" style="background-color: var(--color-loyalty)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">CRM & Loyalty Schemes</h3>
+            <p class="feature-description">Nurture supplier and client relationships with granular credit limits and loyalty incentives.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Partner CRM Accounts</strong>
+                  <span>Credit tracking, transaction history sheets, outstanding balances, and aging due alerts.</span>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Loyalty & Rewards campaign</strong>
+                  <span>Configurable loyalty points, auto coupon generators, and discount schemes configuration.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category: Customization & Security -->
+          <div class="feature-card" style="--accent-gradient: linear-gradient(135deg, #ec4899, #f472b6)">
+            <div class="feature-icon-wrapper" style="background-color: var(--color-compliance)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Compliance, Themes & Access</h3>
+            <p class="feature-description">Personalize settings to match regional regulations, local time zones, design palettes, and user roles.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>HST/GST Compliance & E-Invoicing</strong>
+                  <span>Manage tax maps, record transaction categories, compile GST reports, and generate e-invoicing API logs.</span>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-list-check">✓</span>
+                <div>
+                  <strong>Tailored Workspace Themes</strong>
+                  <span>Seamless Dark and Light modes combined with premium accent styles (Indigo, Emerald, Ocean, and more).</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --- INTERACTIVE SANDBOX SECTION --- -->
+    <section class="section sandbox" id="sandbox">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2 class="section-title">Interactive Live Workspace</h2>
+          <p class="section-subtitle">Experience how configurations in the settings panel instantly affect your workflow outputs. Modify values on the left and see the virtual results on the right.</p>
+        </div>
+        
+        <div class="sandbox-layout">
+          
+          <!-- Sandbox Simulator Controls -->
+          <div class="sandbox-controls">
+            
+            <!-- Control 1: Theme Accents -->
+            <div class="sandbox-control-card active-panel" data-panel="theme" onclick="activatePanel('theme')">
+              <div class="sandbox-header">
+                <div class="sandbox-icon">🎨</div>
+                <h3>Theme Settings Simulator</h3>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Choose your primary accent color. It will update the visual elements on the entire landing page and the virtual mockups in real time.</p>
+              <div class="sandbox-body">
+                <div class="form-label">Select Accent Color</div>
+                <div class="accent-picker">
+                  <div class="accent-dot dot-indigo active" onclick="setAccent('indigo', 245, '80%', '60%')" title="Indigo Theme"></div>
+                  <div class="accent-dot dot-emerald" onclick="setAccent('emerald', 150, '80%', '40%')" title="Emerald Theme"></div>
+                  <div class="accent-dot dot-ocean" onclick="setAccent('ocean', 200, '85%', '50%')" title="Ocean Blue Theme"></div>
+                  <div class="accent-dot dot-orange" onclick="setAccent('orange', 25, '90%', '55%')" title="Orange Theme"></div>
+                  <div class="accent-dot dot-purple" onclick="setAccent('purple', 275, '75%', '60%')" title="Purple Theme"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Control 2: Number Series -->
+            <div class="sandbox-control-card" data-panel="number" onclick="activatePanel('number')">
+              <div class="sandbox-header">
+                <div class="sandbox-icon">🔢</div>
+                <h3>Automated Number Series</h3>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Configure prefix formatting and padding rules for document numbers. Notice how numbers increment safely.</p>
+              <div class="sandbox-body">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                  <div class="form-group">
+                    <label class="form-label" for="seriesPrefix">Series Prefix</label>
+                    <input type="text" id="seriesPrefix" class="form-input" value="INV-">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="seriesPadding">Padding Digits</label>
+                    <input type="number" id="seriesPadding" class="form-input" value="4" min="1" max="8">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="seriesStart">Starting Sequence</label>
+                  <input type="number" id="seriesStart" class="form-input" value="1001" min="1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Control 3: Invoice Layout -->
+            <div class="sandbox-control-card" data-panel="invoice" onclick="activatePanel('invoice')">
+              <div class="sandbox-header">
+                <div class="sandbox-icon">📄</div>
+                <h3>Invoice Templates Layout</h3>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Swap design formats instantly depending on your business. Toggle styles between Standard, Monospace Thermal, and Modern.</p>
+              <div class="sandbox-body">
+                <div class="form-group">
+                  <label class="form-label" for="invoiceLayout">Layout Template</label>
+                  <select id="invoiceLayout" class="form-select">
+                    <option value="standard">Standard A4 Format</option>
+                    <option value="thermal">Monospace Thermal Receipt</option>
+                    <option value="modern">Clean Modern Sidebar Format</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="invoiceHeader">Invoice Header Title</label>
+                  <input type="text" id="invoiceHeader" class="form-input" value="TAX INVOICE">
+                </div>
+              </div>
+            </div>
+
+            <!-- Control 4: SMTP Email Config -->
+            <div class="sandbox-control-card" data-panel="email" onclick="activatePanel('email')">
+              <div class="sandbox-header">
+                <div class="sandbox-icon">✉️</div>
+                <h3>SMTP Email Configuration</h3>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Set up automated email sending. Run a mock test directly from our SMTP server validation panel.</p>
+              <div class="sandbox-body">
+                <div class="form-group">
+                  <label class="form-label" for="smtpHost">SMTP Server Host</label>
+                  <input type="text" id="smtpHost" class="form-input" value="smtp.gmail.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="recipientEmail">Recipient Email Address</label>
+                  <input type="email" id="recipientEmail" class="form-input" value="client@example.com">
+                </div>
+                <div class="smtp-btn-row">
+                  <button type="button" class="btn btn-primary" id="btnTestSmtp" style="padding: 8px 18px; font-size: 0.85rem; width: 100%;">
+                    <span>Send Test Email</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sandbox Visualizer Output -->
+          <div class="sandbox-visualizer" id="visualizer">
+            <div class="visualizer-header">
+              <div class="visualizer-title" id="visualizerTitle">Theme Customizer Preview</div>
+              <span style="font-family: monospace; font-size: 0.75rem; color: var(--text-muted);">sandbox://output_logs</span>
+            </div>
+            <div class="visualizer-body" id="visualizerBody">
+              
+              <!-- Content for Theme customizer panel (Default active) -->
+              <div id="vizContentTheme" class="viz-wrapper">
+                <div style="text-align: center; max-width: 320px;">
+                  <div style="font-size: 3rem; margin-bottom: 16px;">🎨</div>
+                  <h4 style="margin-bottom: 8px; font-size: 1.1rem;">Accent Styling Active</h4>
+                  <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 16px;">This page has been re-rendered. The dynamic accent values have updated across all headers, cards, glows, and CTAs.</p>
+                  <div style="display: flex; gap: 8px; justify-content: center;">
+                    <span class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.75rem; cursor: default;">Accent RGB</span>
+                    <span class="btn btn-outline" style="padding: 6px 14px; font-size: 0.75rem; cursor: default;" id="accentHslText">HSL(245, 80%, 60%)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content for Number Series (Initial hidden) -->
+              <div id="vizContentNumber" class="viz-wrapper" style="display: none; width: 100%;">
+                <div class="virtual-numbers">
+                  <div class="virtual-counter" id="numberCounter">INV-1001</div>
+                  <div class="virtual-series-list">
+                    <div class="virtual-series-item active">
+                      <span>Next Generated:</span>
+                      <span id="seriesActiveVal">INV-1001</span>
+                    </div>
+                    <div class="virtual-series-item">
+                      <span>Subsequent 1:</span>
+                      <span id="seriesVal2">INV-1002</span>
+                    </div>
+                    <div class="virtual-series-item">
+                      <span>Subsequent 2:</span>
+                      <span id="seriesVal3">INV-1003</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content for Invoice (Initial hidden) -->
+              <div id="vizContentInvoice" class="viz-wrapper" style="display: none; width: 100%;">
+                <div class="virtual-invoice layout-standard" id="invoiceMockup">
+                  <div class="invoice-header">
+                    <div>
+                      <div class="invoice-logo">KY mStore Corp</div>
+                      <div style="font-size: 0.7rem; color: #64748b; margin-top: 2px;">128 Business Hub, New Delhi</div>
+                    </div>
+                    <div class="invoice-meta">
+                      <div style="font-weight: 700; font-size: 0.9rem;" id="invoiceTitleVal">TAX INVOICE</div>
+                      <div style="color: #64748b; font-size: 0.7rem; margin-top: 4px;">Invoice: <strong id="invNumPlaceholder">INV-1001</strong></div>
+                      <div style="color: #64748b; font-size: 0.7rem;">Date: 2026-06-30</div>
+                    </div>
+                  </div>
+                  <div class="invoice-items">
+                    <div class="invoice-item-row" style="font-weight: 600; font-size: 0.75rem; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 8px;">
+                      <span>Description</span>
+                      <span>Qty</span>
+                      <span>Total</span>
+                    </div>
+                    <div class="invoice-item-row">
+                      <span class="invoice-item-name">iPhone 15 Pro Max</span>
+                      <span>1</span>
+                      <span>₹1,19,900</span>
+                    </div>
+                    <div class="invoice-item-row">
+                      <span class="invoice-item-name">Wireless Airpods</span>
+                      <span>2</span>
+                      <span>₹29,800</span>
+                    </div>
+                  </div>
+                  <div class="invoice-totals">
+                    <div class="invoice-total-row">
+                      <span>Subtotal:</span>
+                      <span>₹1,49,700</span>
+                    </div>
+                    <div class="invoice-total-row">
+                      <span>Tax (18% GST):</span>
+                      <span>₹26,946</span>
+                    </div>
+                    <div class="invoice-total-row grand">
+                      <span>Grand Total:</span>
+                      <span>₹1,76,646</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content for Email Config (Initial hidden) -->
+              <div id="vizContentEmail" class="viz-wrapper" style="display: none; width: 100%;">
+                <div class="virtual-email">
+                  <div class="email-header">
+                    <div class="email-header-line">From: <span>KY mStore Admin &lt;noreply@kymstore.com&gt;</span></div>
+                    <div class="email-header-line">To: <span id="emailToVal">client@example.com</span></div>
+                    <div class="email-header-line">Subject: <span>Your Invoice Payment Receipt #INV-1001</span></div>
+                  </div>
+                  <div class="email-body">
+                    <p style="margin-bottom: 12px; font-weight: 600;">Dear Valued Customer,</p>
+                    <p style="margin-bottom: 12px;">Thank you for shopping at KY mStore Corp. We have received your payment for Invoice #INV-1001.</p>
+                    <p style="margin-bottom: 16px;">A summary receipt has been successfully compiled and processed via our SMTP server (Host: <span id="emailHostVal">smtp.gmail.com</span>).</p>
+                    <p style="font-size: 0.8rem; color: #64748b;">Best Regards,<br>Billing Team</p>
+                  </div>
+                  <div class="email-status ready" id="emailStatus">
+                    <div class="email-status-light"></div>
+                    <span id="emailStatusText">SMTP Connection Idle (Ready)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --- SCREENSHOT GALLERY SECTION --- -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2 class="section-title">Product Settings Showcase</h2>
+          <p class="section-subtitle">Take a closer look at the actual configuration management modules that drive the KY mStore Enterprise runtime engine.</p>
+        </div>
+        
+        <div class="gallery-grid">
+          
+          <!-- Image 1: Number Series -->
+          <div class="gallery-card">
+            <div class="gallery-image-wrapper" onclick="openLightbox('images/number_series.png')">
+              <img src="images/number_series.png" alt="Number Series Settings dashboard screen">
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-badge">Sequence Engine</div>
+              <h4 class="gallery-title">Number Series Configuration</h4>
+              <p class="gallery-desc">Set custom formats, alphanumeric prefixes (e.g. INV-), digit lengths, and tracking lists for retail bills, receipts, products, and customer profiles.</p>
+            </div>
+          </div>
+
+          <!-- Image 2: Invoice Templates -->
+          <div class="gallery-card">
+            <div class="gallery-image-wrapper" onclick="openLightbox('images/invoice_templates.png')">
+              <img src="images/invoice_templates.png" alt="Invoice Templates selection and live preview">
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-badge">Billing Layouts</div>
+              <h4 class="gallery-title">Invoice Design & Templates</h4>
+              <p class="gallery-desc">Toggle formatting styles dynamically. Switch between standard layouts for desk office work, and monospace receipt layouts for retail thermal printers.</p>
+            </div>
+          </div>
+
+          <!-- Image 3: Theme Settings -->
+          <div class="gallery-card">
+            <div class="gallery-image-wrapper" onclick="openLightbox('images/theme_settings.png')">
+              <img src="images/theme_settings.png" alt="Theme Settings accent colors and dark mode choice">
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-badge">Design Options</div>
+              <h4 class="gallery-title">Theme Accent Selection</h4>
+              <p class="gallery-desc">Switch between true dark mode and clean light theme profiles. Select your brand primary accent color (Indigo, Emerald, Ocean, Orange, or Purple).</p>
+            </div>
+          </div>
+
+          <!-- Image 4: Email SMTP Configuration -->
+          <div class="gallery-card">
+            <div class="gallery-image-wrapper" onclick="openLightbox('images/email_config.png')">
+              <img src="images/email_config.png" alt="Email Configuration panel and connection check">
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-badge">Communication</div>
+              <h4 class="gallery-title">SMTP Mail Integration</h4>
+              <p class="gallery-desc">Plug in custom mail hosts, SSL protocols, username credentials, and run instant verification checks to automate customer invoice notifications.</p>
+            </div>
+          </div>
+
+          <!-- Image 5: Financial Years Configuration -->
+          <div class="gallery-card">
+            <div class="gallery-image-wrapper" onclick="openLightbox('images/financial_years.png')">
+              <img src="images/financial_years.png" alt="Financial Years grid and date validation editor">
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-badge">Accounting Control</div>
+              <h4 class="gallery-title">Financial Year Lockouts</h4>
+              <p class="gallery-desc">Define financial years, map start/end dates, lock reporting windows, and activate sequence periods for double-entry ledgers.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --- CALL TO ACTION --- -->
+    <section class="section cta" id="cta">
+      <div class="container cta-content">
+        <h2 class="cta-title">Upgrade to Enterprise Retail Management</h2>
+        <p class="cta-desc">Power up your retail store, chain warehouses, and online catalogs with the ultimate business intelligence platform. Personalize it your way.</p>
+        <div style="display: flex; gap: 16px; justify-content: center;">
+          <a href="#sandbox" class="btn btn-primary">Try Interactive Mockups</a>
+          <a href="mailto:info@kymstore.com" class="btn btn-outline">Request Custom Demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#hero" class="logo" style="margin-bottom: 16px;">
+            <div class="logo-icon">M</div>
+            <span style="color: var(--text-main);">KY mStore</span>
+          </a>
+          <p class="footer-desc">KY mStore Enterprise is a premium e-commerce management and retail ERP software designed to offer robust intelligence, speed, and clean workspaces.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Modules</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Accounting & Ledger</a></li>
+            <li><a href="#features">Warehouse Stock</a></li>
+            <li><a href="#features">POS Checkout</a></li>
+            <li><a href="#features">Customer CRM</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customization</h4>
+          <ul class="footer-links">
+            <li><a href="#sandbox">Live Accent Color</a></li>
+            <li><a href="#sandbox">Number Formatting</a></li>
+            <li><a href="#sandbox">A4/Thermal Templates</a></li>
+            <li><a href="#sandbox">SMTP Alert Settings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="#cta">Contact Sales</a></li>
+            <li><a href="#cta">API Documentation</a></li>
+            <li><a href="#cta">Developer Console</a></li>
+            <li><a href="#cta">Support Forum</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 KY mStore Corp. All rights reserved. Compliant with HSN/GST billing standards.</p>
+        <p>Built with Premium Vanilla CSS & JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- IMAGE LIGHTBOX MODAL --- -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image popup">&times;</button>
+    <img class="lightbox-content" id="lightboxImg" src="" alt="Zoomed screenshot preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
