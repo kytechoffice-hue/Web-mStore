@@ -572,32 +572,32 @@
           </a>
           <p class="footer-desc">KY mStore Enterprise is a premium e-commerce management and retail ERP software designed to offer robust intelligence, speed, and clean workspaces.</p>
         </div>
-        <div class="footer-col">
-          <h4>Modules</h4>
-          <ul class="footer-links">
-            <li><a href="#features">Accounting & Ledger</a></li>
-            <li><a href="#features">Warehouse Stock</a></li>
-            <li><a href="#features">POS Checkout</a></li>
-            <li><a href="#features">Customer CRM</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Customization</h4>
-          <ul class="footer-links">
-            <li><a href="#sandbox">Live Accent Color</a></li>
-            <li><a href="#sandbox">Number Formatting</a></li>
-            <li><a href="#sandbox">A4/Thermal Templates</a></li>
-            <li><a href="#sandbox">SMTP Alert Settings</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Get in Touch</h4>
-          <ul class="footer-links">
-            <li><a href="#cta">Contact Sales</a></li>
-            <li><a href="#cta">API Documentation</a></li>
-            <li><a href="#cta">Developer Console</a></li>
-            <li><a href="#cta">Support Forum</a></li>
-          </ul>
+        <div class="footer-col footer-demo-col">
+          <div class="footer-demo-card">
+            <h4>Request a Live Demo</h4>
+            <p class="footer-desc" style="margin-top: 4px; margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted);">Experience a personalized walkthrough of KY mStore Enterprise.</p>
+            <form id="demoRequestForm" class="footer-form">
+              <div class="footer-form-group">
+                <input type="text" id="demoName" class="form-input footer-input" placeholder="Customer Name" required>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 12px; margin-bottom: 12px;">
+                <div class="footer-form-group" style="margin-bottom: 0;">
+                  <input type="tel" id="demoPhone" class="form-input footer-input" placeholder="Contact No" required>
+                </div>
+                <div class="footer-form-group" style="margin-bottom: 0;">
+                  <input type="email" id="demoEmail" class="form-input footer-input" placeholder="Email ID" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary footer-btn" style="width: 100%; margin-top: 8px; font-size: 0.85rem; padding: 10px 20px;">
+                <span>Book Demo Session</span>
+              </button>
+            </form>
+            <div id="demoSuccessMessage" style="display: none; text-align: center; padding: 10px 0;">
+              <div class="success-icon" style="font-size: 2rem; margin-bottom: 8px; color: var(--accent-color);">✓</div>
+              <h5 style="color: var(--text-main); font-size: 1rem; margin-bottom: 4px;">Request Received!</h5>
+              <p style="color: var(--text-muted); font-size: 0.8rem;">Thank you, <strong id="successCustomerName"></strong>. Our executive will reach out to you at <span id="successCustomerPhone"></span> shortly.</p>
+            </div>
+          </div>
         </div>
       </div>
       

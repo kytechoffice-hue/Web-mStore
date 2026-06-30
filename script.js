@@ -305,3 +305,39 @@ btnTestSmtp.addEventListener('click', () => {
     }, 1200);
   }, 1200);
 });
+
+// --- FOOTER DEMO REQUEST FORM LOGIC ---
+const demoRequestForm = document.getElementById('demoRequestForm');
+const demoSuccessMessage = document.getElementById('demoSuccessMessage');
+const successCustomerName = document.getElementById('successCustomerName');
+const successCustomerPhone = document.getElementById('successCustomerPhone');
+
+if (demoRequestForm) {
+  demoRequestForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('demoName').value;
+    const phone = document.getElementById('demoPhone').value;
+    const email = document.getElementById('demoEmail').value;
+    
+    // Simulate API submission
+    const submitBtn = demoRequestForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Processing...</span>';
+    
+    setTimeout(() => {
+      // Hide form
+      demoRequestForm.style.display = 'none';
+      
+      // Update success message text
+      successCustomerName.textContent = name;
+      successCustomerPhone.textContent = phone;
+      
+      // Show success container
+      demoSuccessMessage.style.display = 'block';
+      
+      // Print console log to simulate backend reception
+      console.log('Demo Request Submitted:', { name, phone, email, timestamp: new Date() });
+    }, 1000);
+  });
+}
